@@ -11,15 +11,19 @@ echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ $AZ_REPO 
 sudo apt-get update
 sudo apt-get install azure-cli
 
-##Install Brew
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
- Sudo apt-get install build-essential
-
-## Install Kubernetes helm
-brew install kubernetes-helm
+## Install Curl
+sudo apt-get install curl
 
 ## Install Terrafrom
-brew install terraform
+sudo apt-get install unzip
+wget https://releases.hashicorp.com/terraform/0.11.10/terraform_0.11.10_linux_amd64.zip
+unzip terraform_0.11.10_linux_amd64.zip
+sudo mv terraform /usr/local/bin/
+
+## Install Kubernetes helm
+curl https://raw.githubusercontent.com/helm/helm/master/scripts/get > get_helm.sh
+chmod 700 get_helm.sh
+./get_helm.sh
 
 ## Install ZSH
 brew install zsh
