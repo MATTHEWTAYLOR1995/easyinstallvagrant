@@ -13,6 +13,7 @@ sudo apt-get install azure-cli
 
 ##Install Brew
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
+ Sudo apt-get install build-essential
 
 ## Install Kubernetes helm
 brew install kubernetes-helm
