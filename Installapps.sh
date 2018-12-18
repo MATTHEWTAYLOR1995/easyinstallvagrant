@@ -31,4 +31,5 @@ sudo apt-get install zsh
 sudo apt-get install git-core
 sudo wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
 chsh -s `which zsh`
+echo vagrant | sudo -S command
 sudo shutdown -r 0
