@@ -27,8 +27,8 @@ chmod 700 get_helm.sh
 helm init
 
 ## Install ZSH
-brew install zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-chsh -s $(which zsh)
-
-source ~/.zshrc
+apt-get install zsh
+apt-get install git-core
+wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
+chsh -s `which zsh`
+sudo shutdown -r 0
