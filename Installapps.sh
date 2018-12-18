@@ -26,10 +26,17 @@ chmod 700 get_helm.sh
 ./get_helm.sh
 helm init
 
+##Install Docker
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+sudo apt-get update
+apt-cache policy docker-ce
+sudo apt-get install -y docker-ce
+
+
 ## Install ZSH
 sudo apt-get install zsh
 sudo apt-get install git-core
 sudo wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
 chsh -s `which zsh`
-echo vagrant | sudo -S command
 sudo shutdown -r 0
