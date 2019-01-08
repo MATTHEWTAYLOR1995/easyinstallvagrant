@@ -16,7 +16,7 @@ sudo apt-get install curl
 
 ## Install Terrafrom
 sudo apt-get install unzip
-wget https://releases.hashicorp.com/terraform/0.11.10/terraform_0.11.10_linux_amd64.zip
+wget https://releases.hashicorp.com/terraform/0.11.10/terraform_0.11.11_linux_amd64.zip
 unzip terraform_0.11.10_linux_amd64.zip
 sudo mv terraform /usr/local/bin/
 
@@ -35,8 +35,8 @@ sudo apt-get install -y docker-ce
 
 
 ## Install ZSH
-sudo apt-get install zsh
-sudo apt-get install git-core
+sudo apt-get install zsh -y
+sudo apt-get install git-core -y
 sudo wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
 chsh -s `which zsh`
 sudo shutdown -r 0
